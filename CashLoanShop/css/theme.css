@@ -1,0 +1,39 @@
+﻿body {
+    font-family: Calibri,Helvetica,Arial,sans-serif;
+}
+
+table tfoot label{
+    display: inline;
+}
+
+
+.form-horizontal .control-group {
+    margin-bottom: 10px;
+}
+
+
+label, input, button, select, textarea {
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 15px;
+}
+
+
+tr.highlight{
+    background-color: #ead041;
+    color: #f00;
+}
+
+td.right{
+    text-align: right;
+}
+
+input.input-currency{
+    text-align: right;
+}
+input.input-error {
+    background-color: #ffb6c1;
+}
+input.input-changed {
+    background-color: #f8e263;
+}

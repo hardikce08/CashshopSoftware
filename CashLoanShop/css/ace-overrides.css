@@ -1,0 +1,62 @@
+﻿table.ratescard {
+    font-size: 0.9em;
+}
+table.ratescard input{
+    font-size: 0.9em;
+}
+
+table.ratescard input.input_numeric {
+        width: 50px;
+        text-align: right;
+}
+
+
+.input_numeric1
+{
+    width: 60px;
+    text-align:right;
+}
+
+table tr td.right {
+    text-align: right;
+}
+
+
+.buildversion {
+    border: 0;
+    position: absolute;
+    left: 2px;
+    bottom: 2px;
+    z-index: 11;
+}
+
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #b94a48;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+/* search box */
+.nav-search .nav-search-input{
+    width: 250px;
+}

@@ -1,0 +1,232 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="admin.master.cs" Inherits="CashLoanShop.Admin.admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/font-awesome.min.css" />
+    <link href="../css/all.css" rel="stylesheet" />
+    <!-- fonts -->
+    <link rel="stylesheet" href="../css/ace-fonts.css" />
+
+    <!-- ace styles -->
+    <link rel="stylesheet" href="../css/ace.min.css" />
+    <link rel="stylesheet" href="../css/ace-rtl.min.css" />
+    <link rel="stylesheet" href="../css/ace-skins.min.css" />
+
+    <!--[if lte IE 8]>
+      <link rel="stylesheet" href="../ace/assets/css/ace-ie.min.css" />
+    <![endif]-->
+    <!-- inline styles related to this page -->
+    <!-- ace settings handler -->
+    <link href="../css/ace-overrides.css" rel="stylesheet" />
+    <link href="../css/gss-bootstrap2-overrides.css" rel="stylesheet" />
+
+    <link href="../css/datepicker.css" rel="stylesheet" />
+    <link href="../css/gridview.css" rel="stylesheet" />
+
+    <script src="../Js/ace-extra.min.js"></script>
+    <script src="../Js/jquery-2.0.3.min.js"></script>
+    <style>
+        .wrapper {
+            border: 1px solid #e5e5e5;
+            background: #e5e5e5;
+            height: 40px;
+            text-align: right;
+            font-size: 22px;
+        }
+
+        @-webkit-keyframes rightThenLeft {
+            0% {
+                margin-right: 0;
+            }
+
+            50% {
+                margin-right: 100%;
+            }
+
+            100% {
+                margin-right: 0;
+            }
+        }
+    </style>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server" class="form-horizontal" role="form">
+        <div class="navbar navbar-default" id="navbar">
+            <script type="text/javascript">
+                try { ace.settings.check('navbar', 'fixed') } catch (e) { }
+            </script>
+
+            <div class="navbar-container" id="navbar-container">
+                <div class="navbar-header pull-left">
+                    <a href="/" class="navbar-brand">
+                        <small>
+                            <i class="icon-globe"></i>
+                            Super Admin Panel
+                        </small>
+                    </a>
+                    <!-- /.brand -->
+                </div>
+                <!-- /.navbar-header -->
+
+                <div class="navbar-header pull-right" role="navigation">
+                    <ul class="nav ace-nav">
+                        <li class="light-blue">
+                            <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+
+                                <span class="user-info">
+                                    <small>Welcome,</small>
+                                    <asp:Label ID="lblUserName" runat="server" Text="Admin"></asp:Label>
+                                </span>
+
+                                <i class="icon-caret-down"></i>
+                            </a>
+
+                            <ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+
+                                <li>
+                                    <asp:LinkButton ID="lnkLogout" runat="server" Text="Logout" OnClick="lnkLogout_Click">  <i class="icon-off"></i>Logout</asp:LinkButton>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- /.ace-nav -->
+                </div>
+                <!-- /.navbar-header -->
+            </div>
+            <!-- /.container -->
+        </div>
+
+        <div class="main-container" id="main-container">
+            <script type="text/javascript">
+                try { ace.settings.check('main-container', 'fixed') } catch (e) { }
+            </script>
+
+            <div class="main-container-inner">
+                <a class="menu-toggler" id="menu-toggler" href="#">
+                    <span class="menu-text"></span>
+                </a>
+
+                <div class="sidebar" id="sidebar">
+                    <script type="text/javascript">
+                        try { ace.settings.check('sidebar', 'fixed') } catch (e) { }
+                    </script>
+
+                    <div class="sidebar-shortcuts" id="sidebar-shortcuts">
+                        <div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
+                            <span class="btn btn-success"></span>
+
+                            <span class="btn btn-info"></span>
+
+                            <span class="btn btn-warning"></span>
+
+                            <span class="btn btn-danger"></span>
+                        </div>
+                    </div>
+                    <!-- #sidebar-shortcuts -->
+
+
+                    <ul class="nav nav-list">
+                        <li class="active">
+                            <a href="#">
+                                <i class="icon-dashboard"></i>
+                                Admin
+                            </a>
+                        </li>
+                        <li><a href="StoreManager.aspx"><i class="glyphicon glyphicon-list-alt"></i><span class="menu-text">Store Manager</span></a></li>
+                        <li><a href="UserManager.aspx"><i class="glyphicon glyphicon-list-alt"></i><span class="menu-text">User Manager</span></a></li>
+                        <li><a href="CustomMessage.aspx"><i class="glyphicon glyphicon-list-alt"></i><span class="menu-text">Custom Message</span></a></li>
+                        <li><a href="GenerateCSVReport.aspx"><i class="glyphicon glyphicon-list-alt"></i><span class="menu-text">Payday Loan CSV Report</span></a></li>
+                          <li><a href="GenerateCSVTermLoanReport.aspx"><i class="glyphicon glyphicon-list-alt"></i><span class="menu-text">Term Loan CSV Report</span></a></li>
+                        <li><a href="DiscountReport.aspx"><i class="glyphicon glyphicon-list-alt"></i><span class="menu-text">View Discount Report</span></a></li>
+                        <li><a href="AdminTransactionReport.aspx"><i class="glyphicon glyphicon-list-alt"></i><span class="menu-text">Store Transaction Report</span></a></li>
+                           <li><a href="CustomerHistory.aspx"><i class="glyphicon glyphicon-list-alt"></i><span class="menu-text">Customer History</span></a></li>
+                        <li><a href="InterestEarnedReport.aspx"><i class="glyphicon glyphicon-list-alt"></i><span class="menu-text">Interest Earned Report</span></a></li>
+                        <li><a href="UpdatePassword.aspx"><i class="glyphicon glyphicon-list-alt"></i><span class="menu-text">Change Password</span></a></li>
+                       <li>
+                                    <a href="LoadEFTPayment.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        <span class="menu-text">Load TermLoan EFT</span>
+                                    </a>
+                                </li>
+                         <li>
+                                    <a href="LoadEFTPayment_PaydayLoan.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        <span class="menu-text">Load PaydayLoan EFT</span>
+                                    </a>
+                                </li>
+
+                        <%-- <li><a href="GenerateCSVReport_Old.aspx"><i class="glyphicon glyphicon-list-alt"></i><span class="menu-text">Old LIVE DB CSV Report</span></a></li>--%>
+                    </ul>
+
+                    <div class="sidebar-collapse" id="sidebar-collapse">
+                        <i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
+                    </div>
+
+                    <script type="text/javascript">
+                        try { ace.settings.check('sidebar', 'collapsed') } catch (e) { }
+                    </script>
+
+                </div>
+
+                <!-- Main content -->
+                <div class="main-content">
+                    <div class="wrapper">
+                        <marquee behavior="alternate"><asp:Label ID="lblMessage" runat="server"></asp:Label></marquee>
+                    </div>
+
+                    <asp:ContentPlaceHolder ID="content" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+
+            </div>
+        </div>
+    </form>
+
+    <script type="text/javascript">
+        window.jQuery || document.write("<script src='../Js/jquery-2.0.3.min.js'>" + "<" + "/script>");
+    </script>
+    <!-- <![endif]-->
+    <!--[if IE]>
+    <script type="text/javascript">
+     window.jQuery || document.write("<script src='../ace/assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+    </script>
+    <![endif]-->
+
+    <script type="text/javascript">
+        if ("ontouchend" in document) document.write("<script src='../Js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
+    </script>
+    <script src="../Js/bootstrap.min.js"></script>
+    <script src="../Js/typeahead-bs2.min.js"></script>
+    <script src="../Js/jquery-ui-1.11.4.js"></script>
+    <script src="../Js/jquery.ui.touch-punch.min.js"></script>
+    <script src="../Js/jquery.slimscroll.min.js"></script>
+    <script src="../Js/ace-elements.min.js"></script>
+    <script src="../Js/ace.min.js"></script>
+
+    <!-- inline scripts related to this page -->
+    <script src="../js/moment.js"></script>
+    <script src="../js/datepicker.js"></script>
+    <script type="text/javascript">
+        jQuery(function ($) {
+            //Android's default browser somehow is confused when tapping on label which will lead to dragging the task
+            //so disable dragging when clicking on label
+            var agent = navigator.userAgent.toLowerCase();
+            if ("ontouchstart" in document && /applewebkit/.test(agent) && /android/.test(agent))
+                $('#tasks').on('touchstart', function (e) {
+                    var li = $(e.target).closest('#tasks li');
+                    if (li.length == 0) return;
+                    var label = li.find('label.inline').get(0);
+                    if (label == e.target || $.contains(label, e.target)) e.stopImmediatePropagation();
+                });
+        })
+    </script>
+    <script src="../Js/admin-common.js"></script>
+</body>
+</html>

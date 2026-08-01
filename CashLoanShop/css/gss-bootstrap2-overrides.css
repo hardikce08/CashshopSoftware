@@ -1,0 +1,22 @@
+﻿/*.body {
+    font-size: 12px;
+}*/
+
+.form-group {
+    margin-bottom: 5px;
+}
+
+.chosen-container-single .chosen-search input[type="text"] {
+    background: none !important;
+}
+
+.chosen-container-single .chosen-single {
+    background-image: linear-gradient(#eee 1%, #fff 15%) !important;
+    border: 1px solid #d5d5d5 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    color: #858585 !important;
+    line-height: 32px !important;
+    font-size: 14px !important;
+    height: 32px !important;
+}

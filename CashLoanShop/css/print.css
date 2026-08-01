@@ -1,0 +1,42 @@
+﻿@media print /*--This is for Print--*/
+{
+    div.hr {
+        background: gray no-repeat scroll;
+        margin-right: 15em;
+        width: 20em;
+        padding-bottom: 3px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+        div.hr hr {
+            display: none;
+        }
+
+    body {
+        font-family: Verdana,Arial;
+        font-size:10px !important;
+    }
+}
+        @media screen /*--This is for Print Preview Screen--*/
+{
+     div.hr {
+        background: gray no-repeat scroll;
+        margin-right: 15em;
+        width: 20em;
+        padding-bottom: 3px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+        div.hr hr {
+            display: none;
+        }
+
+    body {
+        font-family: Verdana,Arial;
+    }
+     .data {
+            font-weight: bold;
+        }
+}

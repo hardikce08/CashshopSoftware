@@ -1,0 +1,50 @@
+﻿/*----------------data Table GridView Css----------------------*/
+        .EU_TableScroll
+        {
+            max-height: 275px;
+            overflow: auto;
+            border:1px solid #ccc;
+           
+        }
+        .EU_DataTable
+        {
+            border-collapse: collapse;
+            width:100%;
+        }
+            .EU_DataTable tr th
+            {
+                background-color: #3c454f;
+                color: #ffffff;
+                padding: 10px 5px 10px 5px;
+                border: 1px solid #cccccc;
+                font-family: Verdana;
+                font-size: 13px;
+                font-weight: normal;
+                text-transform:capitalize;
+            }
+            .EU_DataTable tr:nth-child(2n+2)
+            {
+                background-color: #f3f4f5;
+            }
+
+            .EU_DataTable tr:nth-child(2n+1) td
+            {
+                background-color: #d6dadf;
+                /*color: #454545;*/
+                 color: black;
+            }
+            .EU_DataTable tr td
+            {
+                padding: 5px 10px 5px 10px;
+                /*padding: 3px 5px 3px 8px;*/
+                color: black;
+                font-family: Verdana;
+                font-size: 13px;
+                border: 1px solid #cccccc;
+                vertical-align: middle;
+            }
+                .EU_DataTable tr td:first-child
+                {
+                    text-align: center;
+                }
+        /*-----------------------------------------------------------------*/

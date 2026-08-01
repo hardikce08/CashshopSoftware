@@ -1,0 +1,42 @@
+﻿@media screen /*--This is for Screen--*/
+{
+     div.hr {
+        background: gray no-repeat scroll;
+        margin-right: 15em;
+        width: 20em;
+        padding-bottom: 3px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+        div.hr hr {
+            display: none;
+        }
+
+     body {
+            font-size:12px !important;
+            font-family:Verdana;
+        }
+            body table td {
+                font-size: 12px !important;
+                font-family: Verdana;
+                
+            }
+        
+     .data {
+            font-weight: bold;
+        }
+
+      div.fhr {
+        background: gray no-repeat scroll;
+        margin-right: 15em;
+        width: 95%;
+        padding-bottom: 3px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+        div.fhr hr {
+            display: none;
+        }
+}
