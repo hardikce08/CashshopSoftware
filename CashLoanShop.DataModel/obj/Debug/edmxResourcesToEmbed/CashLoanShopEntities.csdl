@@ -1,0 +1,468 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CashLoanShopModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Province" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PostCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BankTransitNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BankAccountNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+  </EntityType>
+  <EntityType Name="CustomerBankInformation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerId" Type="Int32" />
+    <Property Name="BankName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AccountNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Province" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PostCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NoofSNF" Type="Int32" />
+    <Property Name="IsBankrutcy" Type="Boolean" />
+    <Property Name="IsAssignments" Type="Boolean" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="TransitNo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="InstitutionNo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CustomerEmployment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerId" Type="Int32" />
+    <Property Name="EmployerName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SupervisorName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Province" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PostCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmployerDurationYears" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmployerDurationMonth" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmployerType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SupervisorPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SupervisorExt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HRPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HRExt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+  </EntityType>
+  <EntityType Name="CustomerMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Mi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Dateofbirth" Type="DateTime" Precision="0" />
+    <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Province" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PostCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DurationYears" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="DurationMonth" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="HomeType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HomePhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WorkPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CellPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneListedunder" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SocialSecurityNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DrivingLicenseNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IssuedAt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Createdat" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ImageName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CustomerReference">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerId" Type="Int32" />
+    <Property Name="Reference1Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Reference1Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Reference1Relation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Reference2Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Reference2Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Reference2Relation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Reference3Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Reference3Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Reference3Relation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="CashLoanShopEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Companies" EntityType="Self.Company" />
+    <EntitySet Name="CustomerBankInformations" EntityType="Self.CustomerBankInformation" />
+    <EntitySet Name="CustomerEmployments" EntityType="Self.CustomerEmployment" />
+    <EntitySet Name="CustomerMasters" EntityType="Self.CustomerMaster" />
+    <EntitySet Name="CustomerReferences" EntityType="Self.CustomerReference" />
+    <EntitySet Name="CustomerIncomes" EntityType="CashLoanShopModel.CustomerIncome" />
+    <EntitySet Name="Users" EntityType="CashLoanShopModel.User" />
+    <EntitySet Name="CompanyStores" EntityType="CashLoanShopModel.CompanyStore" />
+    <EntitySet Name="CashCheques" EntityType="CashLoanShopModel.CashCheque" />
+    <EntitySet Name="CurrencyExchanges" EntityType="CashLoanShopModel.CurrencyExchange" />
+    <EntitySet Name="CurrencyTypeMasters" EntityType="CashLoanShopModel.CurrencyTypeMaster" />
+    <EntitySet Name="LoanPartialPayments" EntityType="CashLoanShopModel.LoanPartialPayment" />
+    <EntitySet Name="CustomMessages" EntityType="CashLoanShopModel.CustomMessage" />
+    <EntitySet Name="Menus" EntityType="CashLoanShopModel.Menu" />
+    <EntitySet Name="UserRoleMenus" EntityType="CashLoanShopModel.UserRoleMenu" />
+    <EntitySet Name="CustomerLoan_History" EntityType="CashLoanShopModel.CustomerLoan_History" />
+    <EntitySet Name="CustomerLoanExceptions" EntityType="CashLoanShopModel.CustomerLoanException" />
+    <EntitySet Name="CustomerLoans" EntityType="CashLoanShopModel.CustomerLoan" />
+    <EntitySet Name="LoanDenyReasons" EntityType="CashLoanShopModel.LoanDenyReason" />
+    <FunctionImport Name="proc_UpdateIdentityCustimerMaster" />
+    <EntitySet Name="AdminUsers" EntityType="CashLoanShopModel.AdminUser" />
+    <EntitySet Name="CustomerTermLoans" EntityType="CashLoanShopModel.CustomerTermLoan" />
+    <EntitySet Name="TermLoanPartialPayments" EntityType="CashLoanShopModel.TermLoanPartialPayment" />
+    <EntitySet Name="LoanStatus" EntityType="CashLoanShopModel.LoanStatu" />
+    <EntitySet Name="TermLoanSchedules" EntityType="CashLoanShopModel.TermLoanSchedule" />
+    <EntitySet Name="CustomerFollowups" EntityType="CashLoanShopModel.CustomerFollowup" />
+  </EntityContainer>
+  <EntityType Name="CustomerIncome">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerId" Type="Int32" />
+    <Property Name="TakehomePay" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IsComputerized" Type="Boolean" />
+    <Property Name="FrequencyofPay" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsDirectDeposit" Type="Boolean" />
+    <Property Name="Createdate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="UserType" Type="Int32" Nullable="false" />
+    <Property Name="PasswordHash" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StoreId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="CompanyStore">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PostCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BusinessName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Province" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Fax" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NewAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" Nullable="false" />
+    <Property Name="NSFCharge" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="InterestRate" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MaximumTermLoanAmount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="AdminFeePercentage" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TermInterestRate" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TermLateInterestRate" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="TermNSFCharge" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="CashCheque">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerId" Type="Int32" Nullable="false" />
+    <Property Name="ChequeIssuerId" Type="Int32" Nullable="false" />
+    <Property Name="ChequeType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ShopStoreId" Type="Int32" Nullable="false" />
+    <Property Name="ChequeNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ChequeAmount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="AmountIssued" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Charges" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="AdminFee" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" Nullable="false" />
+    <Property Name="CustomPercentage" Type="Decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="CurrencyExchange">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerId" Type="Int32" Nullable="false" />
+    <Property Name="TransactionType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CurrencyType" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ShopStoreId" Type="Int32" Nullable="false" />
+    <Property Name="ExchangeRate" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="ExchangeAmount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="ServiceCharge" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="DueAmount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="ConvertedAmount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="CurrencyTypeMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="LoanPartialPayment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LoanId" Type="Int32" Nullable="false" />
+    <Property Name="PartialAmount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Createdby" Type="Int32" Nullable="false" />
+    <Property Name="IntrestCharge" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="DueAmount" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="PartialPaymentMethod" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CustomMessage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Menu">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MenuName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="MenuLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayOrder" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserRoleMenu">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserRoleTypeId" Type="Int32" Nullable="false" />
+    <Property Name="MenuId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CustomerLoan_History">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="CustomerId" />
+      <PropertyRef Name="ShopStoreId" />
+      <PropertyRef Name="LoanAmountApplied" />
+      <PropertyRef Name="NextPayDate" />
+      <PropertyRef Name="IsLoanApproved" />
+      <PropertyRef Name="LoanAmountApproved" />
+      <PropertyRef Name="DueAmount" />
+      <PropertyRef Name="CreatedBy" />
+      <PropertyRef Name="CreatedDate" />
+      <PropertyRef Name="AdminFee" />
+      <PropertyRef Name="LoanStatus" />
+      <PropertyRef Name="StatusUpdatedby" />
+      <PropertyRef Name="UpdatedDate" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="CustomerId" Type="Int32" Nullable="false" />
+    <Property Name="ShopStoreId" Type="Int32" Nullable="false" />
+    <Property Name="LoanAmountApplied" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="NextPayDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LateInterestRate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsLoanApproved" Type="Boolean" Nullable="false" />
+    <Property Name="LoanAmountApproved" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="PaymentOption" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="DueAmount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="AdminFee" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="LoanStatus" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="StatusUpdatedby" Type="Int32" Nullable="false" />
+    <Property Name="LoanType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="OverDueReason" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ModeofPayment" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="OverdueCount" Type="Int32" />
+    <Property Name="RemainingAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DiscountAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="LateInterestCharge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="NSFCharge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Settlement" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="LastDueAmount" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="Created_Date" Type="DateTime" Precision="3" Nullable="false" />
+    <Property Name="LastStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CustomerLoanException">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerId" Type="Int32" />
+    <Property Name="LoanId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="CustomerLoan">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerId" Type="Int32" Nullable="false" />
+    <Property Name="ShopStoreId" Type="Int32" Nullable="false" />
+    <Property Name="LoanAmountApplied" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="NextPayDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LateInterestRate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsLoanApproved" Type="Boolean" Nullable="false" />
+    <Property Name="LoanAmountApproved" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="PaymentOption" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="DueAmount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="AdminFee" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="LoanStatus" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="StatusUpdatedby" Type="Int32" Nullable="false" />
+    <Property Name="LoanType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="OverDueReason" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ModeofPayment" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="OverdueCount" Type="Int32" />
+    <Property Name="RemainingAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DiscountAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="LateInterestCharge" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="NSFCharge" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="Settlement" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="LastDueAmount" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="LastStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MonthlyIncome" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Installment1Date" Type="DateTime" Precision="3" />
+    <Property Name="Installment2Date" Type="DateTime" Precision="3" />
+    <Property Name="Last63DaysLoanCount" Type="Int32" />
+    <Property Name="Installment1Amount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Installment2Amount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Installment3Amount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="LoanPaymentType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="LoanDenyReason">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LoanId" Type="Int32" />
+    <Property Name="DenyReason" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="AdminUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CustomerTermLoan">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerId" Type="Int32" Nullable="false" />
+    <Property Name="ShopStoreId" Type="Int32" Nullable="false" />
+    <Property Name="LoanAmountApplied" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="DueDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LateInterestRate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsLoanApproved" Type="Boolean" Nullable="false" />
+    <Property Name="LoanAmountApproved" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="PaymentOption" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="DueAmount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="AdminFee" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="LoanStatus" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="StatusUpdatedby" Type="Int32" Nullable="false" />
+    <Property Name="LoanType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FirstInstallmentDate" Type="DateTime" Precision="3" />
+    <Property Name="SecondInstallmentDate" Type="DateTime" Precision="3" />
+    <Property Name="LoanTerm" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ModeofPayment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RemainingAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DiscountAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ReportText" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="InstallmentAmount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="InterestCharge" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="LateInterestCharge" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="NSFCharge" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="NoofInstallment" Type="Int32" Nullable="false" />
+    <Property Name="LoanOverDueDate" Type="DateTime" Precision="3" />
+    <Property Name="LastStatus" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TermLoanPartialPayment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LoanId" Type="Int32" Nullable="false" />
+    <Property Name="PartialAmount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Createdby" Type="Int32" Nullable="false" />
+    <Property Name="IntrestCharge" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="DueAmount" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="PartialPaymentMethod" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="InstallmentPrincipalAmount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="InstallmentInterestAmount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="DiscountAmount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Balance" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
+  </EntityType>
+  <EntityType Name="LoanStatu">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="StatusId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TermLoanSchedule">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LoanId" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="InstallmentNo" Type="Int32" Nullable="false" />
+    <Property Name="Principal" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Interest" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Balance" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="IsPaid" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CustomerFollowup">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerId" Type="Int32" />
+    <Property Name="FollowupDate" Type="DateTime" Precision="0" />
+    <Property Name="FollowupTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FollowupCode" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FollowupDoneBy" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NextFolloupDate" Type="DateTime" Precision="0" />
+    <Property Name="NextFollowupTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Comments" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="FinalStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+  </EntityType>
+</Schema>

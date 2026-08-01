@@ -1,0 +1,501 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CashLoanShopModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AdminUsers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CashCheque">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerId" Type="int" Nullable="false" />
+    <Property Name="ChequeIssuerId" Type="int" Nullable="false" />
+    <Property Name="ChequeType" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShopStoreId" Type="int" Nullable="false" />
+    <Property Name="ChequeNumber" Type="nvarchar" MaxLength="100" />
+    <Property Name="ChequeAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="AmountIssued" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Charges" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="AdminFee" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CustomPercentage" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Address" Type="nvarchar" MaxLength="500" />
+    <Property Name="City" Type="nvarchar" MaxLength="100" />
+    <Property Name="Province" Type="nvarchar" MaxLength="100" />
+    <Property Name="PostCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="BankTransitNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="BankAccountNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="nvarchar" MaxLength="500" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="int" />
+  </EntityType>
+  <EntityType Name="CompanyStore">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="500" />
+    <Property Name="PhoneNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" />
+    <Property Name="PostCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="150" />
+    <Property Name="City" Type="nvarchar" MaxLength="100" />
+    <Property Name="BusinessName" Type="nvarchar" MaxLength="150" />
+    <Property Name="Province" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="50" />
+    <Property Name="NewAddress" Type="nvarchar" MaxLength="500" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="NSFCharge" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="InterestRate" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MaximumTermLoanAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="AdminFeePercentage" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TermInterestRate" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TermLateInterestRate" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TermNSFCharge" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CurrencyExchange">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerId" Type="int" Nullable="false" />
+    <Property Name="TransactionType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CurrencyType" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ShopStoreId" Type="int" Nullable="false" />
+    <Property Name="ExchangeRate" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ExchangeAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ServiceCharge" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="DueAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ConvertedAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CurrencyTypeMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="150" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CustomerBankInformation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerId" Type="int" />
+    <Property Name="BankName" Type="nvarchar" MaxLength="100" />
+    <Property Name="AccountNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="500" />
+    <Property Name="City" Type="nvarchar" MaxLength="100" />
+    <Property Name="Province" Type="nvarchar" MaxLength="100" />
+    <Property Name="PostCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="NoofSNF" Type="int" />
+    <Property Name="IsBankrutcy" Type="bit" />
+    <Property Name="IsAssignments" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="TransitNo" Type="nvarchar" MaxLength="100" />
+    <Property Name="InstitutionNo" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="CustomerEmployment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerId" Type="int" />
+    <Property Name="EmployerName" Type="nvarchar" MaxLength="100" />
+    <Property Name="SupervisorName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Address" Type="nvarchar" MaxLength="500" />
+    <Property Name="City" Type="nvarchar" MaxLength="100" />
+    <Property Name="Province" Type="nvarchar" MaxLength="100" />
+    <Property Name="PostCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmployerDurationYears" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmployerDurationMonth" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmployerType" Type="nvarchar" MaxLength="50" />
+    <Property Name="SupervisorPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="SupervisorExt" Type="nvarchar" MaxLength="50" />
+    <Property Name="HRPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="HRExt" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="int" />
+  </EntityType>
+  <EntityType Name="CustomerFollowup">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerId" Type="int" />
+    <Property Name="FollowupDate" Type="date" />
+    <Property Name="FollowupTime" Type="nvarchar" MaxLength="50" />
+    <Property Name="FollowupCode" Type="nvarchar" MaxLength="150" />
+    <Property Name="FollowupDoneBy" Type="nvarchar" MaxLength="150" />
+    <Property Name="NextFolloupDate" Type="date" />
+    <Property Name="NextFollowupTime" Type="nvarchar" MaxLength="50" />
+    <Property Name="Comments" Type="nvarchar" MaxLength="500" />
+    <Property Name="FinalStatus" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="int" />
+  </EntityType>
+  <EntityType Name="CustomerIncome">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerId" Type="int" />
+    <Property Name="TakehomePay" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="IsComputerized" Type="bit" />
+    <Property Name="FrequencyofPay" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsDirectDeposit" Type="bit" />
+    <Property Name="Createdate" Type="datetime" />
+    <Property Name="CreatedBy" Type="int" />
+  </EntityType>
+  <EntityType Name="CustomerLoan">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerId" Type="int" Nullable="false" />
+    <Property Name="ShopStoreId" Type="int" Nullable="false" />
+    <Property Name="LoanAmountApplied" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="NextPayDate" Type="datetime" Nullable="false" />
+    <Property Name="LateInterestRate" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsLoanApproved" Type="bit" Nullable="false" />
+    <Property Name="LoanAmountApproved" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PaymentOption" Type="nvarchar" MaxLength="150" />
+    <Property Name="DueAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="AdminFee" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="LoanStatus" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="StatusUpdatedby" Type="int" Nullable="false" />
+    <Property Name="LoanType" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="OverDueReason" Type="nvarchar" MaxLength="500" />
+    <Property Name="ModeofPayment" Type="nvarchar" MaxLength="150" />
+    <Property Name="OverdueCount" Type="int" />
+    <Property Name="RemainingAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="DiscountAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="LateInterestCharge" Type="decimal" Precision="9" Scale="2" />
+    <Property Name="NSFCharge" Type="decimal" Precision="9" Scale="2" />
+    <Property Name="Settlement" Type="nvarchar" MaxLength="500" />
+    <Property Name="LastDueAmount" Type="decimal" Precision="9" Scale="2" />
+    <Property Name="LastStatus" Type="nvarchar" MaxLength="50" />
+    <Property Name="MonthlyIncome" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Installment1Date" Type="datetime" />
+    <Property Name="Installment2Date" Type="datetime" />
+    <Property Name="Last63DaysLoanCount" Type="int" />
+    <Property Name="Installment1Amount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Installment2Amount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Installment3Amount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="LoanPaymentType" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'cashshopdatabaseMigrated.dbo.CustomerLoan_History' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CustomerLoan_History">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="CustomerId" />
+      <PropertyRef Name="ShopStoreId" />
+      <PropertyRef Name="LoanAmountApplied" />
+      <PropertyRef Name="NextPayDate" />
+      <PropertyRef Name="IsLoanApproved" />
+      <PropertyRef Name="LoanAmountApproved" />
+      <PropertyRef Name="DueAmount" />
+      <PropertyRef Name="CreatedBy" />
+      <PropertyRef Name="CreatedDate" />
+      <PropertyRef Name="AdminFee" />
+      <PropertyRef Name="LoanStatus" />
+      <PropertyRef Name="StatusUpdatedby" />
+      <PropertyRef Name="UpdatedDate" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="CustomerId" Type="int" Nullable="false" />
+    <Property Name="ShopStoreId" Type="int" Nullable="false" />
+    <Property Name="LoanAmountApplied" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="NextPayDate" Type="datetime" Nullable="false" />
+    <Property Name="LateInterestRate" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsLoanApproved" Type="bit" Nullable="false" />
+    <Property Name="LoanAmountApproved" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PaymentOption" Type="nvarchar" MaxLength="150" />
+    <Property Name="DueAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="AdminFee" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="LoanStatus" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="StatusUpdatedby" Type="int" Nullable="false" />
+    <Property Name="LoanType" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="OverDueReason" Type="nvarchar" MaxLength="500" />
+    <Property Name="ModeofPayment" Type="nvarchar" MaxLength="150" />
+    <Property Name="OverdueCount" Type="int" />
+    <Property Name="RemainingAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="DiscountAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="LateInterestCharge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="NSFCharge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Settlement" Type="nvarchar" MaxLength="500" />
+    <Property Name="LastDueAmount" Type="decimal" Precision="9" Scale="2" />
+    <Property Name="Created_Date" Type="datetime" Nullable="false" />
+    <Property Name="LastStatus" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CustomerLoanException">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerId" Type="int" />
+    <Property Name="LoanId" Type="int" />
+  </EntityType>
+  <EntityType Name="CustomerMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="100" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Mi" Type="nvarchar" MaxLength="50" />
+    <Property Name="Dateofbirth" Type="date" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="10" />
+    <Property Name="Address" Type="nvarchar" MaxLength="500" />
+    <Property Name="City" Type="nvarchar" MaxLength="100" />
+    <Property Name="Province" Type="nvarchar" MaxLength="100" />
+    <Property Name="PostCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="DurationYears" Type="nchar" MaxLength="10" />
+    <Property Name="DurationMonth" Type="nchar" MaxLength="10" />
+    <Property Name="HomeType" Type="nvarchar" MaxLength="50" />
+    <Property Name="HomePhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="WorkPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="CellPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="PhoneListedunder" Type="nvarchar" MaxLength="100" />
+    <Property Name="SocialSecurityNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="DrivingLicenseNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="IssuedAt" Type="nvarchar" MaxLength="50" />
+    <Property Name="Comments" Type="nvarchar(max)" />
+    <Property Name="Createdat" Type="datetime" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="ImageName" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="CustomerReference">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerId" Type="int" />
+    <Property Name="Reference1Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Reference1Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Reference1Relation" Type="nvarchar" MaxLength="50" />
+    <Property Name="Reference2Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Reference2Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Reference2Relation" Type="nvarchar" MaxLength="50" />
+    <Property Name="Reference3Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Reference3Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Reference3Relation" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="int" />
+  </EntityType>
+  <EntityType Name="CustomerTermLoan">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerId" Type="int" Nullable="false" />
+    <Property Name="ShopStoreId" Type="int" Nullable="false" />
+    <Property Name="LoanAmountApplied" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="DueDate" Type="datetime" Nullable="false" />
+    <Property Name="LateInterestRate" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsLoanApproved" Type="bit" Nullable="false" />
+    <Property Name="LoanAmountApproved" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PaymentOption" Type="nvarchar" MaxLength="150" />
+    <Property Name="DueAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="AdminFee" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="LoanStatus" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="StatusUpdatedby" Type="int" Nullable="false" />
+    <Property Name="LoanType" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="FirstInstallmentDate" Type="datetime" />
+    <Property Name="SecondInstallmentDate" Type="datetime" />
+    <Property Name="LoanTerm" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModeofPayment" Type="nvarchar" MaxLength="50" />
+    <Property Name="RemainingAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="DiscountAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ReportText" Type="varchar" MaxLength="300" />
+    <Property Name="InstallmentAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="InterestCharge" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="LateInterestCharge" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="NSFCharge" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="NoofInstallment" Type="int" Nullable="false" />
+    <Property Name="LoanOverDueDate" Type="datetime" />
+    <Property Name="LastStatus" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CustomMessage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Message" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="LoanDenyReason">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LoanId" Type="int" />
+    <Property Name="DenyReason" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="LoanPartialPayment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LoanId" Type="int" Nullable="false" />
+    <Property Name="PartialAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="Createdby" Type="int" Nullable="false" />
+    <Property Name="IntrestCharge" Type="decimal" Precision="9" Scale="2" />
+    <Property Name="DueAmount" Type="decimal" Precision="9" Scale="2" />
+    <Property Name="PartialPaymentMethod" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="LoanStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
+    <Property Name="StatusId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Menu">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MenuName" Type="nvarchar" MaxLength="150" />
+    <Property Name="MenuLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="DisplayOrder" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TermLoanPartialPayment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LoanId" Type="int" Nullable="false" />
+    <Property Name="PartialAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="Createdby" Type="int" Nullable="false" />
+    <Property Name="IntrestCharge" Type="decimal" Precision="9" Scale="2" />
+    <Property Name="DueAmount" Type="decimal" Precision="9" Scale="2" />
+    <Property Name="PartialPaymentMethod" Type="nvarchar" MaxLength="150" />
+    <Property Name="InstallmentPrincipalAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="InstallmentInterestAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="DiscountAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Balance" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TermLoanSchedule">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LoanId" Type="int" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="Amount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="InstallmentNo" Type="int" Nullable="false" />
+    <Property Name="Principal" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Interest" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Balance" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="IsPaid" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserRoleMenu">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserRoleTypeId" Type="int" Nullable="false" />
+    <Property Name="MenuId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UserType" Type="int" Nullable="false" />
+    <Property Name="PasswordHash" Type="nvarchar" MaxLength="50" />
+    <Property Name="StoreId" Type="int" />
+  </EntityType>
+  <Function Name="proc_UpdateIdentityCustimerMaster" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="CashLoanShopModelStoreContainer">
+    <EntitySet Name="AdminUsers" EntityType="Self.AdminUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CashCheque" EntityType="Self.CashCheque" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Company" EntityType="Self.Company" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CompanyStore" EntityType="Self.CompanyStore" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CurrencyExchange" EntityType="Self.CurrencyExchange" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CurrencyTypeMaster" EntityType="Self.CurrencyTypeMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CustomerBankInformation" EntityType="Self.CustomerBankInformation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CustomerEmployment" EntityType="Self.CustomerEmployment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CustomerFollowup" EntityType="Self.CustomerFollowup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CustomerIncome" EntityType="Self.CustomerIncome" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CustomerLoan" EntityType="Self.CustomerLoan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CustomerLoanException" EntityType="Self.CustomerLoanException" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CustomerMaster" EntityType="Self.CustomerMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CustomerReference" EntityType="Self.CustomerReference" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CustomerTermLoan" EntityType="Self.CustomerTermLoan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CustomMessage" EntityType="Self.CustomMessage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoanDenyReason" EntityType="Self.LoanDenyReason" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoanPartialPayment" EntityType="Self.LoanPartialPayment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoanStatus" EntityType="Self.LoanStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Menu" EntityType="Self.Menu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TermLoanPartialPayment" EntityType="Self.TermLoanPartialPayment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TermLoanSchedule" EntityType="Self.TermLoanSchedule" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserRoleMenu" EntityType="Self.UserRoleMenu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CustomerLoan_History" EntityType="Self.CustomerLoan_History" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[CustomerLoan_History].[Id] AS [Id], 
+[CustomerLoan_History].[CustomerId] AS [CustomerId], 
+[CustomerLoan_History].[ShopStoreId] AS [ShopStoreId], 
+[CustomerLoan_History].[LoanAmountApplied] AS [LoanAmountApplied], 
+[CustomerLoan_History].[NextPayDate] AS [NextPayDate], 
+[CustomerLoan_History].[LateInterestRate] AS [LateInterestRate], 
+[CustomerLoan_History].[IsLoanApproved] AS [IsLoanApproved], 
+[CustomerLoan_History].[LoanAmountApproved] AS [LoanAmountApproved], 
+[CustomerLoan_History].[PaymentOption] AS [PaymentOption], 
+[CustomerLoan_History].[DueAmount] AS [DueAmount], 
+[CustomerLoan_History].[CreatedBy] AS [CreatedBy], 
+[CustomerLoan_History].[CreatedDate] AS [CreatedDate], 
+[CustomerLoan_History].[AdminFee] AS [AdminFee], 
+[CustomerLoan_History].[LoanStatus] AS [LoanStatus], 
+[CustomerLoan_History].[StatusUpdatedby] AS [StatusUpdatedby], 
+[CustomerLoan_History].[LoanType] AS [LoanType], 
+[CustomerLoan_History].[UpdatedDate] AS [UpdatedDate], 
+[CustomerLoan_History].[OverDueReason] AS [OverDueReason], 
+[CustomerLoan_History].[ModeofPayment] AS [ModeofPayment], 
+[CustomerLoan_History].[OverdueCount] AS [OverdueCount], 
+[CustomerLoan_History].[RemainingAmount] AS [RemainingAmount], 
+[CustomerLoan_History].[DiscountAmount] AS [DiscountAmount], 
+[CustomerLoan_History].[LateInterestCharge] AS [LateInterestCharge], 
+[CustomerLoan_History].[NSFCharge] AS [NSFCharge], 
+[CustomerLoan_History].[Settlement] AS [Settlement], 
+[CustomerLoan_History].[LastDueAmount] AS [LastDueAmount], 
+[CustomerLoan_History].[Created_Date] AS [Created_Date], 
+[CustomerLoan_History].[LastStatus] AS [LastStatus]
+FROM [dbo].[CustomerLoan_History] AS [CustomerLoan_History]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

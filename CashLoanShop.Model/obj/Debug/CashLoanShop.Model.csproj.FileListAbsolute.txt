@@ -1,0 +1,68 @@
+E:\CashLoanShop\CashLoanShop.Model\bin\Debug\CashLoanShop.Model.dll
+E:\CashLoanShop\CashLoanShop.Model\bin\Debug\CashLoanShop.Model.pdb
+E:\CashLoanShop\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.csprojResolveAssemblyReference.cache
+E:\CashLoanShop\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.dll
+E:\CashLoanShop\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.pdb
+C:\Users\dell15\Desktop\CashLoanShop\CashLoanShop.Model\bin\Debug\CashLoanShop.Model.dll
+C:\Users\dell15\Desktop\CashLoanShop\CashLoanShop.Model\bin\Debug\CashLoanShop.Model.pdb
+C:\Users\dell15\Desktop\CashLoanShop\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.csprojResolveAssemblyReference.cache
+C:\Users\dell15\Desktop\CashLoanShop\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.dll
+C:\Users\dell15\Desktop\CashLoanShop\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.pdb
+E:\Projects\Codes\CashLoanShop\CashLoanShop.Model\bin\Debug\CashLoanShop.Model.dll
+E:\Projects\Codes\CashLoanShop\CashLoanShop.Model\bin\Debug\CashLoanShop.Model.pdb
+E:\Projects\Codes\CashLoanShop\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.dll
+E:\Projects\Codes\CashLoanShop\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.pdb
+E:\Projects\Codes\CashLoanShop\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.csprojResolveAssemblyReference.cache
+E:\PaydayLoanMart\CashLoanShop.Model\bin\Debug\CashLoanShop.Model.dll
+E:\PaydayLoanMart\CashLoanShop.Model\bin\Debug\CashLoanShop.Model.pdb
+E:\PaydayLoanMart\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.csprojResolveAssemblyReference.cache
+E:\PaydayLoanMart\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.dll
+E:\PaydayLoanMart\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.pdb
+E:\Projects\Codes\PaydayLoanMart\CashLoanShop.Model\bin\Debug\CashLoanShop.Model.dll
+E:\Projects\Codes\PaydayLoanMart\CashLoanShop.Model\bin\Debug\CashLoanShop.Model.pdb
+E:\Projects\Codes\PaydayLoanMart\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.dll
+E:\Projects\Codes\PaydayLoanMart\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.pdb
+E:\Projects\Codes\PaydayLoanMart\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.csprojResolveAssemblyReference.cache
+E:\Projects\Codes\Cash4LoanDb\CashLoanShop.Model\bin\Debug\CashLoanShop.Model.dll
+E:\Projects\Codes\Cash4LoanDb\CashLoanShop.Model\bin\Debug\CashLoanShop.Model.pdb
+E:\Projects\Codes\Cash4LoanDb\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.dll
+E:\Projects\Codes\Cash4LoanDb\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.pdb
+E:\Backup\Cash4LoanDb\CashLoanShop.Model\bin\Debug\CashLoanShop.Model.dll
+E:\Backup\Cash4LoanDb\CashLoanShop.Model\bin\Debug\CashLoanShop.Model.pdb
+E:\Backup\Cash4LoanDb\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.csprojResolveAssemblyReference.cache
+E:\Backup\Cash4LoanDb\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.csproj.CoreCompileInputs.cache
+E:\Backup\Cash4LoanDb\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.dll
+E:\Backup\Cash4LoanDb\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.pdb
+C:\Users\dell15\Downloads\Cash4LoanDb\CashLoanShop.Model\bin\Debug\CashLoanShop.Model.dll
+C:\Users\dell15\Downloads\Cash4LoanDb\CashLoanShop.Model\bin\Debug\CashLoanShop.Model.pdb
+C:\Users\dell15\Downloads\Cash4LoanDb\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.csprojResolveAssemblyReference.cache
+C:\Users\dell15\Downloads\Cash4LoanDb\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.dll
+C:\Users\dell15\Downloads\Cash4LoanDb\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.pdb
+E:\Backup\Cash4LoanDb_CashshopDatabse\CashLoanShop.Model\bin\Debug\CashLoanShop.Model.dll
+E:\Backup\Cash4LoanDb_CashshopDatabse\CashLoanShop.Model\bin\Debug\CashLoanShop.Model.pdb
+E:\Backup\Cash4LoanDb_CashshopDatabse\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.csprojResolveAssemblyReference.cache
+E:\Backup\Cash4LoanDb_CashshopDatabse\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.csproj.CoreCompileInputs.cache
+E:\Backup\Cash4LoanDb_CashshopDatabse\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.dll
+E:\Backup\Cash4LoanDb_CashshopDatabse\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.pdb
+E:\Projects\Codes\My Loan Product\Cash4LoanDb_CashshopDatabse\CashLoanShop.Model\bin\Debug\CashLoanShop.Model.dll
+E:\Projects\Codes\My Loan Product\Cash4LoanDb_CashshopDatabse\CashLoanShop.Model\bin\Debug\CashLoanShop.Model.pdb
+E:\Projects\Codes\My Loan Product\Cash4LoanDb_CashshopDatabse\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.dll
+E:\Projects\Codes\My Loan Product\Cash4LoanDb_CashshopDatabse\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.pdb
+E:\Projects\Codes\My Loan Product\Cash4LoanDb_CashshopDatabse\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.csprojResolveAssemblyReference.cache
+E:\Projects\Codes\My Loan Product\Cash4LoanDb_CashshopDatabse With Session\CashLoanShop.Model\bin\Debug\CashLoanShop.Model.dll
+E:\Projects\Codes\My Loan Product\Cash4LoanDb_CashshopDatabse With Session\CashLoanShop.Model\bin\Debug\CashLoanShop.Model.pdb
+E:\Projects\Codes\My Loan Product\Cash4LoanDb_CashshopDatabse With Session\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.csprojResolveAssemblyReference.cache
+E:\Projects\Codes\My Loan Product\Cash4LoanDb_CashshopDatabse With Session\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.dll
+E:\Projects\Codes\My Loan Product\Cash4LoanDb_CashshopDatabse With Session\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.pdb
+D:\Codes\My Loan Product\Cash4LoanDb_CashshopDatabse With Session\CashLoanShop.Model\bin\Debug\CashLoanShop.Model.dll
+D:\Codes\My Loan Product\Cash4LoanDb_CashshopDatabse With Session\CashLoanShop.Model\bin\Debug\CashLoanShop.Model.pdb
+D:\Codes\My Loan Product\Cash4LoanDb_CashshopDatabse With Session\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.csproj.AssemblyReference.cache
+D:\Codes\My Loan Product\Cash4LoanDb_CashshopDatabse With Session\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.csproj.CoreCompileInputs.cache
+D:\Codes\My Loan Product\Cash4LoanDb_CashshopDatabse With Session\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.dll
+D:\Codes\My Loan Product\Cash4LoanDb_CashshopDatabse With Session\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.pdb
+D:\Codes\My Loan Product\Cash4LoanDb_CashshopDatabse With Session_Cashshopsoftware.org\CashLoanShop.Model\bin\Debug\CashLoanShop.Model.dll
+D:\Codes\My Loan Product\Cash4LoanDb_CashshopDatabse With Session_Cashshopsoftware.org\CashLoanShop.Model\bin\Debug\CashLoanShop.Model.pdb
+D:\Codes\My Loan Product\Cash4LoanDb_CashshopDatabse With Session_Cashshopsoftware.org\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.csproj.AssemblyReference.cache
+D:\Codes\My Loan Product\Cash4LoanDb_CashshopDatabse With Session_Cashshopsoftware.org\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.csproj.CoreCompileInputs.cache
+D:\Codes\My Loan Product\Cash4LoanDb_CashshopDatabse With Session_Cashshopsoftware.org\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.dll
+D:\Codes\My Loan Product\Cash4LoanDb_CashshopDatabse With Session_Cashshopsoftware.org\CashLoanShop.Model\obj\Debug\CashLoanShop.Model.pdb

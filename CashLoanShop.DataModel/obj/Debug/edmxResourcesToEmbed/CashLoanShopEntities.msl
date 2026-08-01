@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CashLoanShopModelStoreContainer" CdmEntityContainer="CashLoanShopEntities">
+    <EntitySetMapping Name="Companies">
+      <EntityTypeMapping TypeName="CashLoanShopModel.Company">
+        <MappingFragment StoreEntitySet="Company">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="PostCode" ColumnName="PostCode" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="BankTransitNumber" ColumnName="BankTransitNumber" />
+          <ScalarProperty Name="BankAccountNumber" ColumnName="BankAccountNumber" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerBankInformations">
+      <EntityTypeMapping TypeName="CashLoanShopModel.CustomerBankInformation">
+        <MappingFragment StoreEntitySet="CustomerBankInformation">
+          <ScalarProperty Name="InstitutionNo" ColumnName="InstitutionNo" />
+          <ScalarProperty Name="TransitNo" ColumnName="TransitNo" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="PostCode" ColumnName="PostCode" />
+          <ScalarProperty Name="NoofSNF" ColumnName="NoofSNF" />
+          <ScalarProperty Name="IsBankrutcy" ColumnName="IsBankrutcy" />
+          <ScalarProperty Name="IsAssignments" ColumnName="IsAssignments" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerEmployments">
+      <EntityTypeMapping TypeName="CashLoanShopModel.CustomerEmployment">
+        <MappingFragment StoreEntitySet="CustomerEmployment">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="EmployerName" ColumnName="EmployerName" />
+          <ScalarProperty Name="SupervisorName" ColumnName="SupervisorName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="PostCode" ColumnName="PostCode" />
+          <ScalarProperty Name="EmployerDurationYears" ColumnName="EmployerDurationYears" />
+          <ScalarProperty Name="EmployerDurationMonth" ColumnName="EmployerDurationMonth" />
+          <ScalarProperty Name="EmployerType" ColumnName="EmployerType" />
+          <ScalarProperty Name="SupervisorPhone" ColumnName="SupervisorPhone" />
+          <ScalarProperty Name="SupervisorExt" ColumnName="SupervisorExt" />
+          <ScalarProperty Name="HRPhone" ColumnName="HRPhone" />
+          <ScalarProperty Name="HRExt" ColumnName="HRExt" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerMasters">
+      <EntityTypeMapping TypeName="CashLoanShopModel.CustomerMaster">
+        <MappingFragment StoreEntitySet="CustomerMaster">
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Mi" ColumnName="Mi" />
+          <ScalarProperty Name="Dateofbirth" ColumnName="Dateofbirth" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="PostCode" ColumnName="PostCode" />
+          <ScalarProperty Name="DurationYears" ColumnName="DurationYears" />
+          <ScalarProperty Name="DurationMonth" ColumnName="DurationMonth" />
+          <ScalarProperty Name="HomeType" ColumnName="HomeType" />
+          <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+          <ScalarProperty Name="WorkPhone" ColumnName="WorkPhone" />
+          <ScalarProperty Name="CellPhone" ColumnName="CellPhone" />
+          <ScalarProperty Name="PhoneListedunder" ColumnName="PhoneListedunder" />
+          <ScalarProperty Name="SocialSecurityNumber" ColumnName="SocialSecurityNumber" />
+          <ScalarProperty Name="DrivingLicenseNumber" ColumnName="DrivingLicenseNumber" />
+          <ScalarProperty Name="IssuedAt" ColumnName="IssuedAt" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Createdat" ColumnName="Createdat" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerReferences">
+      <EntityTypeMapping TypeName="CashLoanShopModel.CustomerReference">
+        <MappingFragment StoreEntitySet="CustomerReference">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="Reference1Name" ColumnName="Reference1Name" />
+          <ScalarProperty Name="Reference1Phone" ColumnName="Reference1Phone" />
+          <ScalarProperty Name="Reference1Relation" ColumnName="Reference1Relation" />
+          <ScalarProperty Name="Reference2Name" ColumnName="Reference2Name" />
+          <ScalarProperty Name="Reference2Phone" ColumnName="Reference2Phone" />
+          <ScalarProperty Name="Reference2Relation" ColumnName="Reference2Relation" />
+          <ScalarProperty Name="Reference3Name" ColumnName="Reference3Name" />
+          <ScalarProperty Name="Reference3Phone" ColumnName="Reference3Phone" />
+          <ScalarProperty Name="Reference3Relation" ColumnName="Reference3Relation" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerIncomes">
+      <EntityTypeMapping TypeName="CashLoanShopModel.CustomerIncome">
+        <MappingFragment StoreEntitySet="CustomerIncome">
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Createdate" ColumnName="Createdate" />
+          <ScalarProperty Name="IsDirectDeposit" ColumnName="IsDirectDeposit" />
+          <ScalarProperty Name="FrequencyofPay" ColumnName="FrequencyofPay" />
+          <ScalarProperty Name="IsComputerized" ColumnName="IsComputerized" />
+          <ScalarProperty Name="TakehomePay" ColumnName="TakehomePay" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="CashLoanShopModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="StoreId" ColumnName="StoreId" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CompanyStores">
+      <EntityTypeMapping TypeName="CashLoanShopModel.CompanyStore">
+        <MappingFragment StoreEntitySet="CompanyStore">
+          <ScalarProperty Name="TermNSFCharge" ColumnName="TermNSFCharge" />
+          <ScalarProperty Name="TermLateInterestRate" ColumnName="TermLateInterestRate" />
+          <ScalarProperty Name="TermInterestRate" ColumnName="TermInterestRate" />
+          <ScalarProperty Name="AdminFeePercentage" ColumnName="AdminFeePercentage" />
+          <ScalarProperty Name="MaximumTermLoanAmount" ColumnName="MaximumTermLoanAmount" />
+          <ScalarProperty Name="InterestRate" ColumnName="InterestRate" />
+          <ScalarProperty Name="NSFCharge" ColumnName="NSFCharge" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="NewAddress" ColumnName="NewAddress" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="BusinessName" ColumnName="BusinessName" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PostCode" ColumnName="PostCode" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CashCheques">
+      <EntityTypeMapping TypeName="CashLoanShopModel.CashCheque">
+        <MappingFragment StoreEntitySet="CashCheque">
+          <ScalarProperty Name="CustomPercentage" ColumnName="CustomPercentage" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="AdminFee" ColumnName="AdminFee" />
+          <ScalarProperty Name="Charges" ColumnName="Charges" />
+          <ScalarProperty Name="AmountIssued" ColumnName="AmountIssued" />
+          <ScalarProperty Name="ChequeAmount" ColumnName="ChequeAmount" />
+          <ScalarProperty Name="ChequeNumber" ColumnName="ChequeNumber" />
+          <ScalarProperty Name="ShopStoreId" ColumnName="ShopStoreId" />
+          <ScalarProperty Name="ChequeType" ColumnName="ChequeType" />
+          <ScalarProperty Name="ChequeIssuerId" ColumnName="ChequeIssuerId" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CurrencyExchanges">
+      <EntityTypeMapping TypeName="CashLoanShopModel.CurrencyExchange">
+        <MappingFragment StoreEntitySet="CurrencyExchange">
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ConvertedAmount" ColumnName="ConvertedAmount" />
+          <ScalarProperty Name="DueAmount" ColumnName="DueAmount" />
+          <ScalarProperty Name="ServiceCharge" ColumnName="ServiceCharge" />
+          <ScalarProperty Name="ExchangeAmount" ColumnName="ExchangeAmount" />
+          <ScalarProperty Name="ExchangeRate" ColumnName="ExchangeRate" />
+          <ScalarProperty Name="ShopStoreId" ColumnName="ShopStoreId" />
+          <ScalarProperty Name="CurrencyType" ColumnName="CurrencyType" />
+          <ScalarProperty Name="TransactionType" ColumnName="TransactionType" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CurrencyTypeMasters">
+      <EntityTypeMapping TypeName="CashLoanShopModel.CurrencyTypeMaster">
+        <MappingFragment StoreEntitySet="CurrencyTypeMaster">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoanPartialPayments">
+      <EntityTypeMapping TypeName="CashLoanShopModel.LoanPartialPayment">
+        <MappingFragment StoreEntitySet="LoanPartialPayment">
+          <ScalarProperty Name="PartialPaymentMethod" ColumnName="PartialPaymentMethod" />
+          <ScalarProperty Name="DueAmount" ColumnName="DueAmount" />
+          <ScalarProperty Name="IntrestCharge" ColumnName="IntrestCharge" />
+          <ScalarProperty Name="Createdby" ColumnName="Createdby" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="PartialAmount" ColumnName="PartialAmount" />
+          <ScalarProperty Name="LoanId" ColumnName="LoanId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomMessages">
+      <EntityTypeMapping TypeName="CashLoanShopModel.CustomMessage">
+        <MappingFragment StoreEntitySet="CustomMessage">
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Menus">
+      <EntityTypeMapping TypeName="CashLoanShopModel.Menu">
+        <MappingFragment StoreEntitySet="Menu">
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="MenuLink" ColumnName="MenuLink" />
+          <ScalarProperty Name="MenuName" ColumnName="MenuName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserRoleMenus">
+      <EntityTypeMapping TypeName="CashLoanShopModel.UserRoleMenu">
+        <MappingFragment StoreEntitySet="UserRoleMenu">
+          <ScalarProperty Name="MenuId" ColumnName="MenuId" />
+          <ScalarProperty Name="UserRoleTypeId" ColumnName="UserRoleTypeId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerLoan_History">
+      <EntityTypeMapping TypeName="CashLoanShopModel.CustomerLoan_History">
+        <MappingFragment StoreEntitySet="CustomerLoan_History">
+          <ScalarProperty Name="LastStatus" ColumnName="LastStatus" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="LastDueAmount" ColumnName="LastDueAmount" />
+          <ScalarProperty Name="Settlement" ColumnName="Settlement" />
+          <ScalarProperty Name="NSFCharge" ColumnName="NSFCharge" />
+          <ScalarProperty Name="LateInterestCharge" ColumnName="LateInterestCharge" />
+          <ScalarProperty Name="DiscountAmount" ColumnName="DiscountAmount" />
+          <ScalarProperty Name="RemainingAmount" ColumnName="RemainingAmount" />
+          <ScalarProperty Name="OverdueCount" ColumnName="OverdueCount" />
+          <ScalarProperty Name="ModeofPayment" ColumnName="ModeofPayment" />
+          <ScalarProperty Name="OverDueReason" ColumnName="OverDueReason" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="LoanType" ColumnName="LoanType" />
+          <ScalarProperty Name="StatusUpdatedby" ColumnName="StatusUpdatedby" />
+          <ScalarProperty Name="LoanStatus" ColumnName="LoanStatus" />
+          <ScalarProperty Name="AdminFee" ColumnName="AdminFee" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="DueAmount" ColumnName="DueAmount" />
+          <ScalarProperty Name="PaymentOption" ColumnName="PaymentOption" />
+          <ScalarProperty Name="LoanAmountApproved" ColumnName="LoanAmountApproved" />
+          <ScalarProperty Name="IsLoanApproved" ColumnName="IsLoanApproved" />
+          <ScalarProperty Name="LateInterestRate" ColumnName="LateInterestRate" />
+          <ScalarProperty Name="NextPayDate" ColumnName="NextPayDate" />
+          <ScalarProperty Name="LoanAmountApplied" ColumnName="LoanAmountApplied" />
+          <ScalarProperty Name="ShopStoreId" ColumnName="ShopStoreId" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerLoanExceptions">
+      <EntityTypeMapping TypeName="CashLoanShopModel.CustomerLoanException">
+        <MappingFragment StoreEntitySet="CustomerLoanException">
+          <ScalarProperty Name="LoanId" ColumnName="LoanId" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerLoans">
+      <EntityTypeMapping TypeName="CashLoanShopModel.CustomerLoan">
+        <MappingFragment StoreEntitySet="CustomerLoan">
+          <ScalarProperty Name="LoanPaymentType" ColumnName="LoanPaymentType" />
+          <ScalarProperty Name="Installment3Amount" ColumnName="Installment3Amount" />
+          <ScalarProperty Name="Installment2Amount" ColumnName="Installment2Amount" />
+          <ScalarProperty Name="Installment1Amount" ColumnName="Installment1Amount" />
+          <ScalarProperty Name="Last63DaysLoanCount" ColumnName="Last63DaysLoanCount" />
+          <ScalarProperty Name="Installment2Date" ColumnName="Installment2Date" />
+          <ScalarProperty Name="Installment1Date" ColumnName="Installment1Date" />
+          <ScalarProperty Name="MonthlyIncome" ColumnName="MonthlyIncome" />
+          <ScalarProperty Name="LastStatus" ColumnName="LastStatus" />
+          <ScalarProperty Name="LastDueAmount" ColumnName="LastDueAmount" />
+          <ScalarProperty Name="Settlement" ColumnName="Settlement" />
+          <ScalarProperty Name="NSFCharge" ColumnName="NSFCharge" />
+          <ScalarProperty Name="LateInterestCharge" ColumnName="LateInterestCharge" />
+          <ScalarProperty Name="DiscountAmount" ColumnName="DiscountAmount" />
+          <ScalarProperty Name="RemainingAmount" ColumnName="RemainingAmount" />
+          <ScalarProperty Name="OverdueCount" ColumnName="OverdueCount" />
+          <ScalarProperty Name="ModeofPayment" ColumnName="ModeofPayment" />
+          <ScalarProperty Name="OverDueReason" ColumnName="OverDueReason" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="LoanType" ColumnName="LoanType" />
+          <ScalarProperty Name="StatusUpdatedby" ColumnName="StatusUpdatedby" />
+          <ScalarProperty Name="LoanStatus" ColumnName="LoanStatus" />
+          <ScalarProperty Name="AdminFee" ColumnName="AdminFee" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="DueAmount" ColumnName="DueAmount" />
+          <ScalarProperty Name="PaymentOption" ColumnName="PaymentOption" />
+          <ScalarProperty Name="LoanAmountApproved" ColumnName="LoanAmountApproved" />
+          <ScalarProperty Name="IsLoanApproved" ColumnName="IsLoanApproved" />
+          <ScalarProperty Name="LateInterestRate" ColumnName="LateInterestRate" />
+          <ScalarProperty Name="NextPayDate" ColumnName="NextPayDate" />
+          <ScalarProperty Name="LoanAmountApplied" ColumnName="LoanAmountApplied" />
+          <ScalarProperty Name="ShopStoreId" ColumnName="ShopStoreId" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoanDenyReasons">
+      <EntityTypeMapping TypeName="CashLoanShopModel.LoanDenyReason">
+        <MappingFragment StoreEntitySet="LoanDenyReason">
+          <ScalarProperty Name="DenyReason" ColumnName="DenyReason" />
+          <ScalarProperty Name="LoanId" ColumnName="LoanId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="proc_UpdateIdentityCustimerMaster" FunctionName="CashLoanShopModel.Store.proc_UpdateIdentityCustimerMaster" />
+    <EntitySetMapping Name="AdminUsers">
+      <EntityTypeMapping TypeName="CashLoanShopModel.AdminUser">
+        <MappingFragment StoreEntitySet="AdminUsers">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerTermLoans">
+      <EntityTypeMapping TypeName="CashLoanShopModel.CustomerTermLoan">
+        <MappingFragment StoreEntitySet="CustomerTermLoan">
+          <ScalarProperty Name="LastStatus" ColumnName="LastStatus" />
+          <ScalarProperty Name="LoanOverDueDate" ColumnName="LoanOverDueDate" />
+          <ScalarProperty Name="NoofInstallment" ColumnName="NoofInstallment" />
+          <ScalarProperty Name="NSFCharge" ColumnName="NSFCharge" />
+          <ScalarProperty Name="LateInterestCharge" ColumnName="LateInterestCharge" />
+          <ScalarProperty Name="InterestCharge" ColumnName="InterestCharge" />
+          <ScalarProperty Name="InstallmentAmount" ColumnName="InstallmentAmount" />
+          <ScalarProperty Name="ReportText" ColumnName="ReportText" />
+          <ScalarProperty Name="DiscountAmount" ColumnName="DiscountAmount" />
+          <ScalarProperty Name="RemainingAmount" ColumnName="RemainingAmount" />
+          <ScalarProperty Name="ModeofPayment" ColumnName="ModeofPayment" />
+          <ScalarProperty Name="LoanTerm" ColumnName="LoanTerm" />
+          <ScalarProperty Name="SecondInstallmentDate" ColumnName="SecondInstallmentDate" />
+          <ScalarProperty Name="FirstInstallmentDate" ColumnName="FirstInstallmentDate" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="LoanType" ColumnName="LoanType" />
+          <ScalarProperty Name="StatusUpdatedby" ColumnName="StatusUpdatedby" />
+          <ScalarProperty Name="LoanStatus" ColumnName="LoanStatus" />
+          <ScalarProperty Name="AdminFee" ColumnName="AdminFee" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="DueAmount" ColumnName="DueAmount" />
+          <ScalarProperty Name="PaymentOption" ColumnName="PaymentOption" />
+          <ScalarProperty Name="LoanAmountApproved" ColumnName="LoanAmountApproved" />
+          <ScalarProperty Name="IsLoanApproved" ColumnName="IsLoanApproved" />
+          <ScalarProperty Name="LateInterestRate" ColumnName="LateInterestRate" />
+          <ScalarProperty Name="DueDate" ColumnName="DueDate" />
+          <ScalarProperty Name="LoanAmountApplied" ColumnName="LoanAmountApplied" />
+          <ScalarProperty Name="ShopStoreId" ColumnName="ShopStoreId" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TermLoanPartialPayments">
+      <EntityTypeMapping TypeName="CashLoanShopModel.TermLoanPartialPayment">
+        <MappingFragment StoreEntitySet="TermLoanPartialPayment">
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="DiscountAmount" ColumnName="DiscountAmount" />
+          <ScalarProperty Name="InstallmentInterestAmount" ColumnName="InstallmentInterestAmount" />
+          <ScalarProperty Name="InstallmentPrincipalAmount" ColumnName="InstallmentPrincipalAmount" />
+          <ScalarProperty Name="PartialPaymentMethod" ColumnName="PartialPaymentMethod" />
+          <ScalarProperty Name="DueAmount" ColumnName="DueAmount" />
+          <ScalarProperty Name="IntrestCharge" ColumnName="IntrestCharge" />
+          <ScalarProperty Name="Createdby" ColumnName="Createdby" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="PartialAmount" ColumnName="PartialAmount" />
+          <ScalarProperty Name="LoanId" ColumnName="LoanId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoanStatus">
+      <EntityTypeMapping TypeName="CashLoanShopModel.LoanStatu">
+        <MappingFragment StoreEntitySet="LoanStatus">
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TermLoanSchedules">
+      <EntityTypeMapping TypeName="CashLoanShopModel.TermLoanSchedule">
+        <MappingFragment StoreEntitySet="TermLoanSchedule">
+          <ScalarProperty Name="IsPaid" ColumnName="IsPaid" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="Interest" ColumnName="Interest" />
+          <ScalarProperty Name="Principal" ColumnName="Principal" />
+          <ScalarProperty Name="InstallmentNo" ColumnName="InstallmentNo" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="LoanId" ColumnName="LoanId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerFollowups">
+      <EntityTypeMapping TypeName="CashLoanShopModel.CustomerFollowup">
+        <MappingFragment StoreEntitySet="CustomerFollowup">
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="FinalStatus" ColumnName="FinalStatus" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="NextFollowupTime" ColumnName="NextFollowupTime" />
+          <ScalarProperty Name="NextFolloupDate" ColumnName="NextFolloupDate" />
+          <ScalarProperty Name="FollowupDoneBy" ColumnName="FollowupDoneBy" />
+          <ScalarProperty Name="FollowupCode" ColumnName="FollowupCode" />
+          <ScalarProperty Name="FollowupTime" ColumnName="FollowupTime" />
+          <ScalarProperty Name="FollowupDate" ColumnName="FollowupDate" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
